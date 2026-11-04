@@ -114,15 +114,6 @@ export const hero = {
   ],
 };
 
-/* ---------- Clients ---------- */
-export const clients = [
-  { name: "DBS", logo: "/clients/client-1.png" },
-  { name: "Zielotech", logo: "/clients/client-2.png" },
-  { name: "Xpressbees", logo: "/clients/client-3.png" },
-  { name: "AS Enterprises", logo: "/clients/client-4.png" },
-  { name: "Fashion and tailoring client", logo: "/clients/client-5.png" }, // TODO: confirm company name (logo is a monogram only)
-];
-
 /* ---------- Stats ---------- */
 export type Stat = { value: number; suffix?: string; label: string };
 
