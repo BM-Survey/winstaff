@@ -7,7 +7,7 @@ import { about } from "@/content/site";
 export function Story() {
   const { story } = about;
   return (
-    <section className="py-20 sm:py-24">
+    <section id="our-story" className="py-20 sm:py-24">
       <Container className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-6">
           <Reveal>

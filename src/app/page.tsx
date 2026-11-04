@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { company } from "@/content/site";
 import { Hero } from "@/components/home/Hero";
-import { LogoStrip } from "@/components/home/LogoStrip";
 import { StatsBand } from "@/components/home/StatsBand";
 import { Services } from "@/components/home/Services";
 import { AudienceSplit } from "@/components/home/AudienceSplit";
@@ -24,7 +23,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <LogoStrip />
       <StatsBand />
       <Services />
       <AudienceSplit />
