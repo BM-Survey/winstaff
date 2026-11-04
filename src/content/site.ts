@@ -427,9 +427,14 @@ export const footer = {
 export const about = {
   hero: {
     eyebrow: "About WinStaff",
-    title: "People-first HR, built for growing Indian businesses",
+    title: { before: "People-first HR, built for", highlight: "growing Indian businesses" },
     description:
-      "WinStaff Solutions is a Pune-based HR consultancy and staffing firm. We help companies hire well, stay compliant and build teams that last.",
+      "WinStaff Solutions is a Pune-based HR consultancy and staffing firm. We help companies:",
+    pillars: ["Hire well", "Stay compliant", "Build teams that last"],
+    cards: [
+      { title: "Pune, India", text: "Serving clients across India" },
+      { title: "10 industries", text: "Covered by our teams" },
+    ],
     image: {
       src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
       alt: "WinStaff team members collaborating in a bright, modern office",
