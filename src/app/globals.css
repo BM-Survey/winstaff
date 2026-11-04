@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens (single source of truth) ---------- */
+@theme {
+  /* Brand (sampled from the WinStaff logo: #0670a0 blue on #c9c9c9 grey) */
+  --color-primary: #0670a0;
+  --color-primary-dark: #054f72;
+  --color-primary-soft: #e4f0f7;
+  --color-logo-grey: #c9c9c9;
+  --color-accent: #f2a51a; /* warm amber for CTAs, contrasts with the blue */
+  --color-accent-dark: #c7820a;
+  --color-accent-soft: #fdf1da;
+
+  /* Neutrals */
+  --color-ink: #0f2334;
+  --color-muted: #55687a;
+  --color-surface: #f3f6f9; /* light grey section bg */
+  --color-line: #e2e8ee;
+
+  /* Typography */
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /* Shape */
+  --radius-card: 1.25rem;
+  --radius-pill: 9999px;
+
+  /* Elevation */
+  --shadow-soft: 0 1px 2px rgb(6 112 160 / 0.05), 0 8px 24px -8px rgb(6 112 160 / 0.14);
+  --shadow-float: 0 12px 40px -12px rgb(5 79 114 / 0.3);
+
+  /* Layout */
+  --container-site: 80rem; /* 1280px */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Hero decorations ---------- */
+.bg-dots {
+  background-image: radial-gradient(var(--color-line) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+.mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+.highlight-underline {
+  background-image: linear-gradient(120deg, var(--color-accent-soft) 0%, var(--color-accent-soft) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.35em;
+  background-position: 0 92%;
+}
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float-y 7s ease-in-out 1.5s infinite;
+}
+@keyframes ping-soft {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+.animate-ping-soft {
+  animation: ping-soft 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-delayed,
+  .animate-ping-soft {
+    animation: none;
+  }
+}
+
+/* ---------- Scroll reveal (progressively enhanced) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
