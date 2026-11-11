@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import { JsonLd, pageMetadata, serviceSchema } from "@/lib/seo";
 import { company, services } from "@/content/site";
 import { Hero } from "@/components/home/Hero";
-import { StatsBand } from "@/components/home/StatsBand";
 import { Services } from "@/components/home/Services";
 import { AudienceSplit } from "@/components/home/AudienceSplit";
 import { Process } from "@/components/home/Process";
 import { Industries } from "@/components/home/Industries";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
-import { Testimonials } from "@/components/home/Testimonials";
 import { FAQ } from "@/components/home/FAQ";
 import { CTABanner } from "@/components/ui/CTABanner";
 
@@ -25,13 +23,11 @@ export default function HomePage() {
     <>
       <JsonLd data={serviceSchema({ name: "Offshore Recruiting Services", serviceType: "Offshore recruitment", description: company.description, path: "/", offers: services.map((s) => ({ name: s.title, description: s.description })) })} />
       <Hero />
-      <StatsBand />
       <Services />
       <AudienceSplit />
       <Process />
       <Industries />
       <WhyChooseUs />
-      <Testimonials />
       <FAQ schema />
       <CTABanner />
     </>

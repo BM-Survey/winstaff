@@ -55,12 +55,8 @@ export const company = {
   phone: "+91 92255 20510",
   phoneHref: "tel:+919225520510",
   email: "contact@beaconmartech.com",
-  foundedYear: 2014, // TODO: confirm
-  social: [
-    { label: "LinkedIn", href: "https://linkedin.com", key: "linkedin" }, // TODO: confirm
-    { label: "Facebook", href: "https://facebook.com", key: "facebook" }, // TODO: confirm
-    { label: "Instagram", href: "https://instagram.com", key: "instagram" }, // TODO: confirm
-  ],
+  // Add real profile URLs here to show social icons in the footer and in search data.
+  social: [] as { label: string; href: string; key: "linkedin" | "facebook" | "instagram" }[],
 };
 
 /* ---------- Navigation ---------- */
@@ -89,16 +85,6 @@ export const hero = {
   subtext:
     "WinStaff Solutions gives US companies and staffing firms dedicated offshore sourcers and recruiters who work your requisitions as an extension of your team, from sourcing and screening to submissions, interviews and offers.",
   proofPoints: ["Dedicated recruiters on US time zones", "Scale up or down as hiring changes", "Lower cost than in-house hiring"], // TODO: confirm
-  trust: {
-    rating: "4.9/5", // TODO: confirm
-    text: "Rated by US hiring partners", // TODO: confirm
-    avatars: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&q=80",
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=96&q=80",
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=96&q=80",
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=96&q=80",
-    ],
-  },
   image: {
     src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
     alt: "WinStaff recruiters reviewing candidate profiles for a US client",
@@ -107,21 +93,7 @@ export const hero = {
     src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80",
     alt: "Recruiter on a video call with a hiring manager",
   },
-  floatingStats: [
-    { value: "5,000+", label: "Candidates placed", trend: "Across US clients" }, // TODO: confirm
-    { value: "98%", label: "Client retention", trend: "Year over year" }, // TODO: confirm
-  ],
 };
-
-/* ---------- Stats ---------- */
-export type Stat = { value: number; suffix?: string; label: string };
-
-export const stats: Stat[] = [
-  { value: 10, suffix: "+", label: "Years of experience" }, // TODO: confirm
-  { value: 5000, suffix: "+", label: "Placements supported" }, // TODO: confirm
-  { value: 150, suffix: "+", label: "US clients served" }, // TODO: confirm
-  { value: 4, label: "Specialist talent markets" },
-];
 
 /* ---------- Services ---------- */
 export type Service = {
@@ -292,38 +264,6 @@ export const whyChooseUs = {
   ] satisfies Feature[],
 };
 
-/* ---------- Testimonials ---------- */
-export type Testimonial = {
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-};
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "The WinStaff team feels like part of our own desk. Communication is clear and the submissions are consistently on target.", // TODO: confirm
-    name: "Placeholder Name", // TODO: confirm
-    role: "Founder & COO",
-    company: "US staffing company",
-  },
-  {
-    quote:
-      "Their sourcers helped us cover far more requisitions without adding headcount, and the candidate quality held up.", // TODO: confirm
-    name: "Placeholder Name", // TODO: confirm
-    role: "Director of Recruiting",
-    company: "IT staffing firm",
-  },
-  {
-    quote:
-      "From intake to onboarding, they kept us updated at every step and adjusted quickly when our priorities changed.", // TODO: confirm
-    name: "Placeholder Name", // TODO: confirm
-    role: "Talent Acquisition Lead",
-    company: "Engineering company",
-  },
-];
-
 /* ---------- FAQ ---------- */
 export type FAQ = { question: string; answer: string };
 
@@ -438,7 +378,6 @@ export const footer = {
   companyLinks: [
     ...nav,
     { label: "Why WinStaff", href: "/employers" },
-    { label: "LinkedIn", href: company.social[0].href },
   ] satisfies NavLink[],
   headOffice: {
     title: "Head office",
@@ -479,7 +418,7 @@ export const about = {
     eyebrow: "Who we are",
     title: "Built on the belief that great companies are built by great teams",
     paragraphs: [
-      `WinStaff Solutions started in ${company.foundedYear} with a simple idea: give growing companies the recruiting capacity they need, without the cost of building it all in-house.`, // TODO: confirm
+      "WinStaff Solutions was founded on a simple idea: give growing companies the recruiting capacity they need, without the cost of building it all in-house.",
       "Today our sourcers and recruiters in Pune, India support US employers and staffing firms across information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional roles.",
       "We work as an extension of our clients' teams, in their tools and on their hours. We are honest about the market, we report clearly on progress, and we take responsibility for the quality of every submission.",
     ],
@@ -522,31 +461,6 @@ export const about = {
       icon: Handshake,
     },
   ] satisfies Feature[],
-  leadership: {
-    eyebrow: "Leadership",
-    title: "The people behind WinStaff",
-    description: "An experienced team with backgrounds in US recruitment, staffing operations and account management.",
-    members: [
-      {
-        name: "Placeholder Name", // TODO: confirm
-        role: "Founder & Director",
-        bio: "15+ years in recruitment and staffing operations.", // TODO: confirm
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80",
-      },
-      {
-        name: "Placeholder Name", // TODO: confirm
-        role: "Head of US Recruitment",
-        bio: "Leads sourcing and full-cycle recruiting teams for US clients.", // TODO: confirm
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
-      },
-      {
-        name: "Placeholder Name", // TODO: confirm
-        role: "Head of Client Delivery",
-        bio: "Owns account management, quality and reporting for every client.", // TODO: confirm
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-      },
-    ],
-  },
 };
 
 /* ---------- Services page ---------- */

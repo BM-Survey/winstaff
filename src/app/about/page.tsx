@@ -3,10 +3,8 @@ import { JsonLd, pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { AboutHero } from "@/components/about/AboutHero";
 import { Story } from "@/components/about/Story";
 import { MissionVision } from "@/components/about/MissionVision";
-import { StatsBand } from "@/components/home/StatsBand";
 import { Values } from "@/components/about/Values";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
-import { Leadership } from "@/components/about/Leadership";
 import { CTABanner } from "@/components/ui/CTABanner";
 
 export const metadata: Metadata = pageMetadata({
@@ -23,10 +21,8 @@ export default function AboutPage() {
       <AboutHero />
       <Story />
       <MissionVision />
-      <StatsBand />
       <Values />
       <WhyChooseUs />
-      <Leadership />
       <CTABanner />
     </>
   );

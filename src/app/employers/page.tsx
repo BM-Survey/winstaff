@@ -8,7 +8,6 @@ import { Offerings } from "@/components/employers/Offerings";
 import { EngagementModels } from "@/components/services/EngagementModels";
 import { Process } from "@/components/home/Process";
 import { Assurance } from "@/components/employers/Assurance";
-import { Testimonials } from "@/components/home/Testimonials";
 import { FAQ } from "@/components/home/FAQ";
 import { EnquiryCta } from "@/components/employers/EnquiryCta";
 import { ctas, employersPage } from "@/content/site";
@@ -52,7 +51,6 @@ export default function EmployersPage() {
       <EngagementModels />
       <Process />
       <Assurance />
-      <Testimonials />
       <FAQ />
       <EnquiryCta />
     </>

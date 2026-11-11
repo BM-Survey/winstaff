@@ -4,8 +4,6 @@ import { PageHero } from "@/components/ui/PageHero";
 import { IndustryNav } from "@/components/industries/IndustryNav";
 import { IndustrySection } from "@/components/industries/IndustrySection";
 import { OtherSectors } from "@/components/industries/OtherSectors";
-import { StatsBand } from "@/components/home/StatsBand";
-import { Testimonials } from "@/components/home/Testimonials";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { industriesPage } from "@/content/site";
 
@@ -31,9 +29,7 @@ export default function IndustriesPage() {
       {industriesPage.details.map((d, i) => (
         <IndustrySection key={d.slug} industry={d} index={i} />
       ))}
-      <StatsBand />
       <OtherSectors />
-      <Testimonials />
       <CTABanner />
     </>
   );

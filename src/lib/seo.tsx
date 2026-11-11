@@ -54,7 +54,6 @@ export const organizationSchema = {
   image: absoluteUrl("/logo.jpg"),
   description: company.description,
   slogan: company.tagline,
-  foundingDate: String(company.foundedYear),
   email: company.email,
   telephone: company.phone,
   address: {
@@ -83,7 +82,7 @@ export const organizationSchema = {
     areaServed: "US",
     availableLanguage: ["English"],
   },
-  sameAs: company.social.map((s) => s.href), // TODO: replace with real profile URLs
+  ...(company.social.length > 0 && { sameAs: company.social.map((s) => s.href) }),
 };
 
 export const websiteSchema = {

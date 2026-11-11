@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { ArrowRight, CheckCircle2, Star, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ctas, hero } from "@/content/site";
-
-const statIcons = [Users, TrendingUp];
 
 export function Hero() {
   return (
@@ -57,35 +55,6 @@ export function Hero() {
               </li>
             ))}
           </ul>
-
-          {/* Trust row */}
-          <div className="mt-8 flex items-center gap-4 border-t border-line pt-6">
-            <ul className="flex -space-x-2.5">
-              {hero.trust.avatars.map((src, i) => (
-                <li key={src} className="relative size-10 overflow-hidden rounded-full ring-2 ring-white">
-                  <Image
-                    src={src}
-                    alt=""
-                    fill
-                    sizes="40px"
-                    className="object-cover"
-                    priority={i === 0}
-                  />
-                </li>
-              ))}
-            </ul>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="flex text-accent" aria-hidden="true">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-4 fill-current" />
-                  ))}
-                </span>
-                <span className="text-sm font-bold text-primary">{hero.trust.rating}</span>
-              </div>
-              <p className="text-xs text-muted">{hero.trust.text}</p>
-            </div>
-          </div>
         </Reveal>
 
         {/* Visual */}
@@ -132,34 +101,6 @@ export function Hero() {
                 />
               </div>
             </div>
-
-            {/* Floating stat cards */}
-            {hero.floatingStats.map((s, i) => {
-              const Icon = statIcons[i] ?? Users;
-              const pos =
-                i === 0
-                  ? "left-0 top-6 -translate-x-3 sm:-translate-x-8 animate-float"
-                  : "bottom-14 right-0 translate-x-3 sm:translate-x-8 animate-float-delayed";
-              return (
-                <div
-                  key={s.label}
-                  className={`absolute ${pos} flex items-center gap-3 rounded-2xl border border-line bg-white/95 px-4 py-3 shadow-float backdrop-blur`}
-                >
-                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent-soft text-accent-dark">
-                    <Icon aria-hidden="true" className="size-5" />
-                  </span>
-                  <span>
-                    <span className="block text-2xl font-extrabold leading-none text-primary">
-                      {s.value}
-                    </span>
-                    <span className="mt-1 block text-xs font-medium text-muted">{s.label}</span>
-                    <span className="mt-1 block text-[11px] font-semibold text-accent-dark">
-                      {s.trend}
-                    </span>
-                  </span>
-                </div>
-              );
-            })}
           </div>
         </Reveal>
       </Container>
