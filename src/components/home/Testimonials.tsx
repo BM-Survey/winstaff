@@ -13,7 +13,7 @@ export function Testimonials() {
           <SectionHeading
             eyebrow="Testimonials"
             title="What our clients say"
-            description="Results from employers who trusted us with their hiring and HR."
+            description="What US employers and staffing firms say about working with our team."
           />
         </Reveal>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">

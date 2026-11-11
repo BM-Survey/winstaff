@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, pageMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
 import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -9,19 +10,34 @@ import { RpoModels } from "@/components/rpo/RpoModels";
 import { RpoExpertise } from "@/components/rpo/RpoExpertise";
 import { Process } from "@/components/home/Process";
 import { FAQ } from "@/components/home/FAQ";
-import { company, rpoPage } from "@/content/site";
+import { company, rpoFaqs, rpoPage } from "@/content/site";
 
-export const metadata: Metadata = {
-  title: "Recruitment Process Outsourcing (RPO) Services",
+export const metadata: Metadata = pageMetadata({
+  title: "RPO Services for US Companies",
   description:
-    "Flexible, scalable RPO from WinStaff Solutions: sourcing, screening, interview coordination, dedicated recruitment teams, high-volume hiring and offer management, as an extension of your team.",
-  alternates: { canonical: "/services/rpo" },
-};
+    "Flexible recruitment process outsourcing (RPO) for US companies: sourcing, screening, interview coordination, dedicated recruiters and offer management.",
+  path: "/services/rpo",
+});
 
 export default function RpoPage() {
   const { hero, cta } = rpoPage;
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Services", path: "/services" },
+            { name: "RPO", path: "/services/rpo" },
+          ]),
+          serviceSchema({
+            name: hero.title,
+            serviceType: "Recruitment process outsourcing",
+            description: hero.description,
+            path: "/services/rpo",
+            offers: rpoPage.services.items.map((s) => ({ name: s.title, description: s.description })),
+          }),
+        ]}
+      />
       <PageHero
         crumbs={[{ label: "Services", href: "/services" }, { label: "RPO" }]}
         eyebrow={hero.eyebrow}
@@ -44,7 +60,7 @@ export default function RpoPage() {
       <RpoModels />
       <RpoExpertise />
       <Process />
-      <FAQ />
+      <FAQ schema items={rpoFaqs} title="RPO questions, answered" description="What US companies ask us most about recruitment process outsourcing." />
       <section className="py-16 sm:py-20">
         <Container>
           <Reveal>

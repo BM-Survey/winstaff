@@ -11,7 +11,7 @@ export function Process() {
           <SectionHeading
             eyebrow="How we work"
             title="A simple, transparent process"
-            description="Four steps from first conversation to a settled new hire."
+            description="Four steps from requirement intake to a candidate who joins."
           />
         </Reveal>
         <ol className="relative mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">

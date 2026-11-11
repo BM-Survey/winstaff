@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { PageHero } from "@/components/ui/PageHero";
@@ -12,19 +13,20 @@ import { FAQ } from "@/components/home/FAQ";
 import { EnquiryCta } from "@/components/employers/EnquiryCta";
 import { ctas, employersPage } from "@/content/site";
 
-export const metadata: Metadata = {
-  title: "For Employers | Hire Talent",
+export const metadata: Metadata = pageMetadata({
+  title: "Why Choose an Offshore Recruiting Partner",
   description:
-    "Hire permanent, contract and temp-to-perm staff or outsource payroll and compliance with WinStaff Solutions, Pune. Shortlists in days, replacement guarantee, full statutory cover.",
-  alternates: { canonical: "/employers" },
-};
+    "De-risk your hiring with WinStaff Solutions: dedicated offshore sourcers and recruiters, RPO programs and clear reporting for US employers and staffing firms.",
+  path: "/employers",
+});
 
 export default function EmployersPage() {
   const { hero } = employersPage;
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Why WinStaff", path: "/employers" }])} />
       <PageHero
-        crumbs={[{ label: "For Employers" }]}
+        crumbs={[{ label: "Why WinStaff" }]}
         eyebrow={hero.eyebrow}
         title={hero.title}
         description={hero.description}

@@ -11,7 +11,7 @@ export function Values() {
           <SectionHeading
             eyebrow="Our values"
             title="What we stand for"
-            description="Four principles that shape every search, every contract and every conversation."
+            description="Four principles that shape every requisition, every submission and every conversation."
           />
         </Reveal>
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
