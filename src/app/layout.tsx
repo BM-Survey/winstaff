@@ -4,6 +4,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { company } from "@/content/site";
+import { JsonLd, organizationSchema, websiteSchema } from "@/lib/seo";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -20,16 +21,17 @@ export const metadata: Metadata = {
   },
   description: company.description,
   keywords: [
-    "HR consultancy Pune",
-    "staffing agency Pune",
-    "recruitment services India",
-    "payroll outsourcing",
-    "manpower outsourcing",
-    "temp staffing",
+    "offshore recruiting",
+    "offshore recruitment services USA",
+    "recruitment process outsourcing",
+    "RPO services",
+    "offshore sourcing",
+    "dedicated offshore recruiters",
+    "US staffing support",
   ],
   openGraph: {
     type: "website",
-    locale: "en_IN",
+    locale: "en_US",
     siteName: company.name,
     title: `${company.name} | ${company.tagline}`,
     description: company.description,
@@ -41,13 +43,19 @@ export const metadata: Metadata = {
     title: `${company.name} | ${company.tagline}`,
     description: company.description,
   },
-  robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-IN" className={`${jakarta.variable} h-full antialiased`}>
+    <html lang="en-US" className={`${jakarta.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <JsonLd data={[organizationSchema, websiteSchema]} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-pill focus:bg-primary focus:px-4 focus:py-2 focus:text-white"

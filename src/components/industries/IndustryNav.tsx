@@ -8,7 +8,7 @@ export function IndustryNav() {
     <section className="relative z-10 -mt-8 pb-4 sm:-mt-10">
       <Container>
         <Reveal>
-          <ul className="grid grid-cols-2 gap-3 rounded-card border border-line bg-white p-3 shadow-float sm:grid-cols-5">
+          <ul className="grid grid-cols-2 gap-3 rounded-card border border-line bg-white p-3 shadow-float sm:grid-cols-4">
             {industriesPage.details.map((d) => (
               <li key={d.slug}>
                 <Link

@@ -11,9 +11,9 @@ export function AudienceSplit() {
       <Container>
         <Reveal>
           <SectionHeading
-            eyebrow="Who we help"
-            title="Two audiences, one promise"
-            description="Whether you are hiring or looking for your next role, we make the process simple and fair."
+            eyebrow="Who we work with"
+            title="Built for US hiring teams"
+            description="Whether you hire for your own company or for your clients, we add recruiting capacity that works like your own team."
           />
         </Reveal>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

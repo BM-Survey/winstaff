@@ -9,12 +9,12 @@ export function Industries() {
       <Container>
         <Reveal>
           <SectionHeading
-            eyebrow="Industries"
-            title="Sectors we know inside out"
-            description="Specialist recruiters for the industries that power India's services economy."
+            eyebrow="Who we serve"
+            title="Talent markets we know inside out"
+            description="Specialist recruiters for the technology-driven and professional roles US companies need most."
           />
         </Reveal>
-        <ul className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <ul className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
           {industries.map((ind, i) => (
             <Reveal key={ind.name} delay={i * 60}>
               <li className="group flex h-full flex-col rounded-card border border-line bg-white p-5 shadow-soft transition-colors hover:border-accent sm:p-7">

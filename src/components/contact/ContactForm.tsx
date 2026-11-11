@@ -93,7 +93,7 @@ export function ContactForm() {
             <label htmlFor={`${id}-city`} className={label}>
               Current city
             </label>
-            <input id={`${id}-city`} name="city" autoComplete="address-level2" className={field} placeholder="e.g. Pune" />
+            <input id={`${id}-city`} name="city" autoComplete="address-level2" className={field} placeholder="e.g. Dallas, TX" />
           </div>
         )}
         <div>
@@ -106,7 +106,7 @@ export function ContactForm() {
           <label htmlFor={`${id}-phone`} className={label}>
             Phone
           </label>
-          <input id={`${id}-phone`} type="tel" name="phone" required autoComplete="tel" className={field} placeholder="+91" />
+          <input id={`${id}-phone`} type="tel" name="phone" required autoComplete="tel" className={field} placeholder="+1" />
         </div>
         <div className="sm:col-span-2">
           <label htmlFor={`${id}-interest`} className={label}>
@@ -135,8 +135,8 @@ export function ContactForm() {
             className={`${field} h-auto py-3`}
             placeholder={
               isEmployer
-                ? "Number of positions, location, timelines, anything else we should know."
-                : "Years of experience, current role, notice period, expected salary."
+                ? "Roles, number of openings, locations, timelines and the tools you use."
+                : "Years of experience, current role, work authorization, availability and expected rate or salary."
             }
           />
         </div>
@@ -149,7 +149,7 @@ export function ContactForm() {
 
       <div className="mt-6">
         <Button type="submit" size="lg" className="w-full sm:w-auto">
-          Send enquiry
+          Send message
           <Send aria-hidden="true" className="size-4" />
         </Button>
       </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { PageHero } from "@/components/ui/PageHero";
 import { IndustryNav } from "@/components/industries/IndustryNav";
 import { IndustrySection } from "@/components/industries/IndustrySection";
@@ -8,16 +9,17 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { industriesPage } from "@/content/site";
 
-export const metadata: Metadata = {
-  title: "Industries We Serve",
+export const metadata: Metadata = pageMetadata({
+  title: "Industries We Recruit For",
   description:
-    "WinStaff Solutions provides specialist staffing and HR services for BPO, KPO, RPO, logistics, banking and telecom companies across India.",
-  alternates: { canonical: "/industries" },
-};
+    "Offshore recruiting for US roles in information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional services.",
+  path: "/industries",
+});
 
 export default function IndustriesPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Industries", path: "/industries" }])} />
       <PageHero
         crumbs={[{ label: "Industries" }]}
         eyebrow={industriesPage.hero.eyebrow}

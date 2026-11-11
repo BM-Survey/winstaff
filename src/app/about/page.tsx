@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { AboutHero } from "@/components/about/AboutHero";
 import { Story } from "@/components/about/Story";
 import { MissionVision } from "@/components/about/MissionVision";
@@ -8,16 +9,17 @@ import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { Leadership } from "@/components/about/Leadership";
 import { CTABanner } from "@/components/ui/CTABanner";
 
-export const metadata: Metadata = {
-  title: "About Us",
+export const metadata: Metadata = pageMetadata({
+  title: "About Us: Offshore Recruitment Partner",
   description:
-    "Learn about WinStaff Solutions, a Pune-based HR consultancy and staffing firm helping Indian businesses hire, stay compliant and grow.",
-  alternates: { canonical: "/about" },
-};
+    "WinStaff Solutions is an offshore recruitment partner with a delivery center in Pune, India, helping US employers and staffing firms source, recruit and scale hiring.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "About", path: "/about" }])} />
       <AboutHero />
       <Story />
       <MissionVision />

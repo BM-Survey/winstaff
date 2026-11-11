@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { company } from "@/content/site";
+import { JsonLd, pageMetadata, serviceSchema } from "@/lib/seo";
+import { company, services } from "@/content/site";
 import { Hero } from "@/components/home/Hero";
 import { StatsBand } from "@/components/home/StatsBand";
 import { Services } from "@/components/home/Services";
@@ -11,17 +12,18 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { FAQ } from "@/components/home/FAQ";
 import { CTABanner } from "@/components/ui/CTABanner";
 
-export const metadata: Metadata = {
-  // Root layout title.template does not apply to the root page, so set it explicitly.
-  title: `HR Consultancy & Staffing Firm in Pune | ${company.name}`,
+export const metadata: Metadata = pageMetadata({
+  title: "Offshore Recruiting & RPO Services for US Companies | WinStaff",
   description:
-    "WinStaff Solutions provides recruitment, HR consulting and outsourcing services for businesses across India. Hire talent or find your next job.",
-  alternates: { canonical: "/" },
-};
+    "WinStaff Solutions is an offshore recruitment partner for US employers and staffing firms: talent sourcing, full-cycle recruiting, dedicated recruiters and RPO.",
+  path: "/",
+  absoluteTitle: true,
+});
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={serviceSchema({ name: "Offshore Recruiting Services", serviceType: "Offshore recruitment", description: company.description, path: "/", offers: services.map((s) => ({ name: s.title, description: s.description })) })} />
       <Hero />
       <StatsBand />
       <Services />
@@ -30,7 +32,7 @@ export default function HomePage() {
       <Industries />
       <WhyChooseUs />
       <Testimonials />
-      <FAQ />
+      <FAQ schema />
       <CTABanner />
     </>
   );

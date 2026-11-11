@@ -12,9 +12,9 @@ export function Services() {
       <Container>
         <Reveal>
           <SectionHeading
-            eyebrow="What we do"
-            title="HR services for every stage of growth"
-            description="Recruitment, consulting and outsourcing, delivered by one team that knows your business."
+            eyebrow="Our services"
+            title="Scale your core business. We'll handle the recruiting."
+            description="Sourcing, recruiting and RPO for US employers and staffing firms, delivered by a dedicated offshore team."
           />
         </Reveal>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">

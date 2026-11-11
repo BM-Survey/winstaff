@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -8,16 +9,17 @@ import { MapEmbed } from "@/components/contact/MapEmbed";
 import { FAQ } from "@/components/home/FAQ";
 import { contactPage } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact Us",
   description:
-    "Contact WinStaff Solutions in Pune for recruitment, HR consulting and outsourcing enquiries. Employers and job seekers welcome.",
-  alternates: { canonical: "/contact" },
-};
+    "Contact WinStaff Solutions about offshore sourcing, recruiting and RPO for your US hiring. Book a free 30-minute consultation with our recruiting team.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Contact", path: "/contact" }])} />
       <PageHero
         crumbs={[{ label: "Contact" }]}
         eyebrow={contactPage.hero.eyebrow}
