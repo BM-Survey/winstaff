@@ -129,9 +129,6 @@ export function Footer() {
                 </span>
               ))}
             </address>
-            <a href={company.phoneHref} className={`mt-4 inline-block ${link}`}>
-              {company.phone}
-            </a>
           </div>
         </div>
 
@@ -146,7 +143,6 @@ export function Footer() {
                 {l.label}
               </Link>
             ))}
-            <span className="text-white/70">{footer.tagline}</span>
           </div>
         </div>
 

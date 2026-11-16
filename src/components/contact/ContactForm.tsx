@@ -106,7 +106,7 @@ export function ContactForm() {
           <label htmlFor={`${id}-phone`} className={label}>
             Phone
           </label>
-          <input id={`${id}-phone`} type="tel" name="phone" required autoComplete="tel" className={field} placeholder="+1" />
+          <input id={`${id}-phone`} type="tel" name="phone" required autoComplete="tel" className={field} />
         </div>
         <div className="sm:col-span-2">
           <label htmlFor={`${id}-interest`} className={label}>

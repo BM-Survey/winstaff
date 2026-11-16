@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -20,9 +20,9 @@ export function EnquiryCta() {
                 {e.cta.label}
                 <ArrowRight aria-hidden="true" className="size-5" />
               </Button>
-              <Button href={company.phoneHref} variant="outline" size="lg">
-                <Phone aria-hidden="true" className="size-5" />
-                {company.phone}
+              <Button href={`mailto:${company.email}`} variant="outline" size="lg">
+                <Mail aria-hidden="true" className="size-5" />
+                {company.email}
               </Button>
             </div>
           </div>

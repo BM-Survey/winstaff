@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd, pageMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
@@ -13,9 +13,9 @@ import { FAQ } from "@/components/home/FAQ";
 import { company, rpoFaqs, rpoPage } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "RPO Services for US Companies",
+  title: "RPO Services for Growing Companies",
   description:
-    "Flexible recruitment process outsourcing (RPO) for US companies: sourcing, screening, interview coordination, dedicated recruiters and offer management.",
+    "Flexible recruitment process outsourcing (RPO) for companies worldwide: sourcing, screening, interview coordination, dedicated recruiters and offer management.",
   path: "/services/rpo",
 });
 
@@ -60,7 +60,7 @@ export default function RpoPage() {
       <RpoModels />
       <RpoExpertise />
       <Process />
-      <FAQ schema items={rpoFaqs} title="RPO questions, answered" description="What US companies ask us most about recruitment process outsourcing." />
+      <FAQ schema items={rpoFaqs} title="RPO questions, answered" description="What companies ask us most about recruitment process outsourcing." />
       <section className="py-16 sm:py-20">
         <Container>
           <Reveal>
@@ -74,9 +74,9 @@ export default function RpoPage() {
                   {cta.cta.label}
                   <ArrowRight aria-hidden="true" className="size-5" />
                 </Button>
-                <Button href={company.phoneHref} variant="outline" size="lg">
-                  <Phone aria-hidden="true" className="size-5" />
-                  {company.phone}
+                <Button href={`mailto:${company.email}`} variant="outline" size="lg">
+                  <Mail aria-hidden="true" className="size-5" />
+                  {company.email}
                 </Button>
               </div>
             </div>

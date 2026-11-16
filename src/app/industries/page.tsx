@@ -4,15 +4,13 @@ import { PageHero } from "@/components/ui/PageHero";
 import { IndustryNav } from "@/components/industries/IndustryNav";
 import { IndustrySection } from "@/components/industries/IndustrySection";
 import { OtherSectors } from "@/components/industries/OtherSectors";
-import { StatsBand } from "@/components/home/StatsBand";
-import { Testimonials } from "@/components/home/Testimonials";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { industriesPage } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Industries We Recruit For",
   description:
-    "Offshore recruiting for US roles in information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional services.",
+    "Offshore recruiting for roles in information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional services.",
   path: "/industries",
 });
 
@@ -31,9 +29,7 @@ export default function IndustriesPage() {
       {industriesPage.details.map((d, i) => (
         <IndustrySection key={d.slug} industry={d} index={i} />
       ))}
-      <StatsBand />
       <OtherSectors />
-      <Testimonials />
       <CTABanner />
     </>
   );

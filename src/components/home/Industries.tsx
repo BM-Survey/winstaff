@@ -11,7 +11,7 @@ export function Industries() {
           <SectionHeading
             eyebrow="Who we serve"
             title="Talent markets we know inside out"
-            description="Specialist recruiters for the technology-driven and professional roles US companies need most."
+            description="Specialist recruiters for the technology-driven and professional roles companies need most."
           />
         </Reveal>
         <ul className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">

@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { ctaBanner } from "@/content/site";
@@ -27,7 +27,7 @@ export function CTABanner() {
                 <ArrowRight aria-hidden="true" className="size-5" />
               </Button>
               <Button href={ctaBanner.secondary.href} variant="inverse" size="lg">
-                <Phone aria-hidden="true" className="size-5" />
+                <Mail aria-hidden="true" className="size-5" />
                 {ctaBanner.secondary.label}
               </Button>
             </div>

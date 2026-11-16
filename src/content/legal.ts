@@ -20,7 +20,6 @@ const addressLine = `${company.address.street}, ${company.address.locality}, ${c
 
 const contactList = [
   `Email: ${company.email}`,
-  `Phone: ${company.phone}`,
   `Address: ${addressLine}`,
 ];
 
@@ -33,7 +32,7 @@ export const privacyPolicy: LegalDoc = {
   description: `How ${company.name} collects, uses, shares and protects personal information from clients, candidates and website visitors.`,
   lastUpdated: "November 11, 2026",
   intro: [
-    `${company.name} ("${company.name}", "we", "us" or "our") provides offshore recruitment, talent sourcing and recruitment process outsourcing (RPO) services to employers and staffing firms in the United States. This Privacy Policy explains how we collect, use, share and protect personal information when you visit our website, contact us, use our services or apply for a role through us.`,
+    `${company.name} ("${company.name}", "we", "us" or "our") provides offshore recruitment, talent sourcing and recruitment process outsourcing (RPO) services to employers and staffing firms worldwide. This Privacy Policy explains how we collect, use, share and protect personal information when you visit our website, contact us, use our services or apply for a role through us.`,
     "By using our website or services, you acknowledge that you have read and understood this Privacy Policy.",
   ],
   sections: [
@@ -88,7 +87,7 @@ export const privacyPolicy: LegalDoc = {
       id: "international-transfers",
       heading: "5. International data transfers",
       paragraphs: [
-        "We are based in India and our clients are primarily in the United States. Your information may therefore be transferred to, stored in and processed in India, the United States and other countries where we or our service providers operate. We take reasonable steps to ensure your information receives an appropriate level of protection wherever it is processed.",
+        "We are based in India and serve clients around the world. Your information may therefore be transferred to, stored in and processed in India and other countries where we or our service providers operate. We take reasonable steps to ensure your information receives an appropriate level of protection wherever it is processed.",
       ],
     },
     {
@@ -127,7 +126,7 @@ export const privacyPolicy: LegalDoc = {
         "Not be discriminated against for exercising your privacy rights.",
       ],
       after: [
-        "Residents of certain US states, such as California, and individuals covered by India's Digital Personal Data Protection Act, 2023, may have additional rights under those laws. To exercise any of these rights, contact us using the details below. We may need to verify your identity before responding.",
+        "Individuals in certain jurisdictions, such as those covered by the EU or UK GDPR or India's Digital Personal Data Protection Act, 2023, may have additional rights under those laws. To exercise any of these rights, contact us using the details below. We may need to verify your identity before responding.",
       ],
     },
     {
