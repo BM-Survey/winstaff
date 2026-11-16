@@ -12,7 +12,7 @@ export function AudienceSplit() {
         <Reveal>
           <SectionHeading
             eyebrow="Who we work with"
-            title="Built for US hiring teams"
+            title="Built for hiring teams everywhere"
             description="Whether you hire for your own company or for your clients, we add recruiting capacity that works like your own team."
           />
         </Reveal>

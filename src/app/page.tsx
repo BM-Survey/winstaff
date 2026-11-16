@@ -11,9 +11,9 @@ import { FAQ } from "@/components/home/FAQ";
 import { CTABanner } from "@/components/ui/CTABanner";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Offshore Recruiting & RPO Services for US Companies | WinStaff",
+  title: "Offshore Recruiting & RPO Services Worldwide | WinStaff",
   description:
-    "WinStaff Solutions is an offshore recruitment partner for US employers and staffing firms: talent sourcing, full-cycle recruiting, dedicated recruiters and RPO.",
+    "WinStaff Solutions is an offshore recruitment partner for employers and staffing firms worldwide: talent sourcing, full-cycle recruiting, dedicated recruiters and RPO.",
   path: "/",
   absoluteTitle: true,
 });

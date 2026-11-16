@@ -15,7 +15,7 @@ import { ctas, employersPage } from "@/content/site";
 export const metadata: Metadata = pageMetadata({
   title: "Why Choose an Offshore Recruiting Partner",
   description:
-    "De-risk your hiring with WinStaff Solutions: dedicated offshore sourcers and recruiters, RPO programs and clear reporting for US employers and staffing firms.",
+    "De-risk your hiring with WinStaff Solutions: dedicated offshore sourcers and recruiters, RPO programs and clear reporting for employers and staffing firms worldwide.",
   path: "/employers",
 });
 

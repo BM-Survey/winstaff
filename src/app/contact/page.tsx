@@ -12,7 +12,7 @@ import { contactPage } from "@/content/site";
 export const metadata: Metadata = pageMetadata({
   title: "Contact Us",
   description:
-    "Contact WinStaff Solutions about offshore sourcing, recruiting and RPO for your US hiring. Book a free 30-minute consultation with our recruiting team.",
+    "Contact WinStaff Solutions about offshore sourcing, recruiting and RPO for your hiring. Book a free 30-minute consultation with our recruiting team.",
   path: "/contact",
 });
 

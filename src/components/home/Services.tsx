@@ -14,7 +14,7 @@ export function Services() {
           <SectionHeading
             eyebrow="Our services"
             title="Scale your core business. We'll handle the recruiting."
-            description="Sourcing, recruiting and RPO for US employers and staffing firms, delivered by a dedicated offshore team."
+            description="Sourcing, recruiting and RPO for employers and staffing firms worldwide, delivered by a dedicated offshore team."
           />
         </Reveal>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">

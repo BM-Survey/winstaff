@@ -8,7 +8,6 @@ import {
   Layers,
   Mail,
   MapPin,
-  Phone,
   Search,
   ShieldCheck,
   Target,
@@ -39,9 +38,9 @@ import {
 /* ---------- Company ---------- */
 export const company = {
   name: "WinStaff Solutions",
-  tagline: "Your Offshore Recruitment Partner for the USA",
+  tagline: "Your Global Offshore Recruitment Partner",
   description:
-    "WinStaff Solutions is an offshore recruitment partner for US employers and staffing firms, providing talent sourcing, full-cycle recruiting and RPO from our delivery center in Pune, India.",
+    "WinStaff Solutions is an offshore recruitment partner for employers and staffing firms worldwide, providing talent sourcing, full-cycle recruiting and RPO from our delivery center in Pune, India.",
   url: "https://www.winstaffsolutions.com", // TODO: confirm domain
   location: "Pune, Maharashtra, India",
   address: {
@@ -51,12 +50,11 @@ export const company = {
     postalCode: "411014",
     country: "India",
   },
-  mapsUrl: "https://maps.google.com/?q=Bramhacorp+Business+Park,+New+Kalyani+Nagar,+Pune,+Maharashtra+411014",
-  phone: "+91 92255 20510",
-  phoneHref: "tel:+919225520510",
-  email: "contact@beaconmartech.com",
-  // Add real profile URLs here to show social icons in the footer and in search data.
-  social: [] as { label: string; href: string; key: "linkedin" | "facebook" | "instagram" }[],
+  mapsUrl: "https://www.google.com/maps/place/Beacon+Martech/data=!4m2!3m1!1s0x0:0xb5f851c353dba440",
+  email: "contact@winstaffsolutions.com",
+  social: [
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/winstaff/home/", key: "linkedin" },
+  ] as { label: string; href: string; key: "linkedin" | "facebook" | "instagram" }[],
 };
 
 /* ---------- Navigation ---------- */
@@ -66,7 +64,6 @@ export const nav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "RPO", href: "/services/rpo" },
   { label: "Industries", href: "/industries" },
   { label: "Contact", href: "/contact" },
 ];
@@ -79,20 +76,21 @@ export const ctas = {
 
 /* ---------- Hero ---------- */
 export const hero = {
-  eyebrow: "Offshore recruiting for US employers and staffing firms",
-  badge: "Recruiting for US clients, on US hours",
+  eyebrow: "Offshore recruiting for employers and staffing firms worldwide",
+  badge: "Recruiting for global clients, on your hours",
   headline: { before: "Focus on what you do best. We'll handle the", highlight: "recruiting." },
   subtext:
-    "WinStaff Solutions gives US companies and staffing firms dedicated offshore sourcers and recruiters who work your requisitions as an extension of your team, from sourcing and screening to submissions, interviews and offers.",
-  proofPoints: ["Dedicated recruiters on US time zones", "Scale up or down as hiring changes", "Lower cost than in-house hiring"], // TODO: confirm
+    "WinStaff Solutions gives companies and staffing firms dedicated offshore sourcers and recruiters who work your requisitions as an extension of your team, from sourcing and screening to submissions, interviews and offers.",
+  proofPoints: ["Dedicated recruiters on your time zone", "Scale up or down as hiring changes", "Lower cost than in-house hiring"], // TODO: confirm
   image: {
     src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
-    alt: "WinStaff recruiters reviewing candidate profiles for a US client",
+    alt: "WinStaff recruiters reviewing candidate profiles for a client",
   },
   imageSecondary: {
     src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80",
     alt: "Recruiter on a video call with a hiring manager",
   },
+  stat: { value: "1000+", label: "Candidates placed" },
 };
 
 /* ---------- Services ---------- */
@@ -160,7 +158,7 @@ export type Audience = {
 export const audiences: Audience[] = [
   {
     key: "employers",
-    eyebrow: "For US Employers",
+    eyebrow: "For Employers",
     title: "Hire faster without growing your HR team",
     description:
       "Add recruiting capacity for hard-to-fill roles, new projects or hiring spikes, with recruiters who learn your business and work your hours.",
@@ -181,7 +179,7 @@ export const audiences: Audience[] = [
     icon: Users,
     benefits: [
       "Dedicated sourcers and recruiters, billed monthly",
-      "Experience with W2, C2C, 1099 and full-time requirements", // TODO: confirm
+      "Experience with contract, contract-to-hire and full-time requirements",
       "Single point of contact for coordination and quality",
     ],
     cta: { label: "Talk to an Expert", href: "/contact" },
@@ -240,11 +238,11 @@ export const whyChooseUs = {
     {
       title: "Cost-Optimized Teams",
       description:
-        "Skilled sourcers and recruiters for a fraction of the cost of building the same team in the US.",
+        "Skilled sourcers and recruiters for a fraction of the cost of building the same team locally.",
       icon: Wallet,
     },
     {
-      title: "US Time-Zone Coverage",
+      title: "Time-Zone Coverage",
       description:
         "Our team works hours that overlap with your business day, so candidates and hiring managers get timely responses.",
       icon: Clock,
@@ -271,12 +269,12 @@ export const faqs: FAQ[] = [
   {
     question: "What is offshore recruiting?",
     answer:
-      "Offshore recruiting is when a company uses a recruitment team based in another country to source, screen and coordinate candidates for its open roles. US employers and staffing firms use offshore recruiters to add recruiting capacity at a lower cost than hiring more in-house recruiters.",
+      "Offshore recruiting is when a company uses a recruitment team based in another country to source, screen and coordinate candidates for its open roles. Employers and staffing firms use offshore recruiters to add recruiting capacity at a lower cost than hiring more in-house recruiters.",
   },
   {
     question: "Who is WinStaff Solutions?",
     answer:
-      "WinStaff Solutions is an offshore recruitment partner for US employers and staffing firms, with its delivery center in Pune, India. We provide talent sourcing, full-cycle recruiting, dedicated recruiters and recruitment process outsourcing (RPO) for IT, semiconductor, engineering and corporate roles.",
+      "WinStaff Solutions is an offshore recruitment partner for employers and staffing firms worldwide, with its delivery center in Pune, India. We provide talent sourcing, full-cycle recruiting, dedicated recruiters and recruitment process outsourcing (RPO) for IT, semiconductor, engineering and corporate roles.",
   },
   {
     question: "How does offshore recruiting with WinStaff work?",
@@ -284,14 +282,14 @@ export const faqs: FAQ[] = [
       "A WinStaff team in Pune, India works on your open requisitions as an extension of your recruiting function. We agree the scope with you, whether that is sourcing only, full-cycle recruiting or a managed RPO program, and report on progress throughout.",
   },
   {
-    question: "Why do US staffing firms use offshore recruiters?",
+    question: "Why do staffing firms use offshore recruiters?",
     answer:
-      "Staffing firms use offshore recruiters to cover more requisitions, send more qualified submissions and let their US account managers focus on clients. Offshore teams cost less than adding US-based recruiters and can be scaled up or down as hiring demand changes.",
+      "Staffing firms use offshore recruiters to cover more requisitions, send more qualified submissions and let their account managers focus on clients. Offshore teams cost less than adding local recruiters and can be scaled up or down as hiring demand changes.",
   },
   {
-    question: "Do your recruiters work US hours?",
+    question: "Do your recruiters work in our time zone?",
     answer:
-      "Yes. Our team works shifts that overlap with US business hours, so we can speak with candidates and hiring managers during your working day.", // TODO: confirm which US time zones you cover
+      "Yes. Our team works shifts that overlap with your business hours, so we can speak with candidates and hiring managers during your working day.",
   },
   {
     question: "Can your team work inside our ATS and tools?",
@@ -301,7 +299,7 @@ export const faqs: FAQ[] = [
   {
     question: "What types of roles and employment do you recruit for?",
     answer:
-      "We recruit across information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional roles, for full-time, contract, W2, C2C and 1099 requirements.", // TODO: confirm
+      "We recruit across information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional roles, for full-time, contract and contract-to-hire requirements.",
   },
   {
     question: "How quickly can we get started?",
@@ -334,7 +332,7 @@ export const rpoFaqs: FAQ[] = [
   {
     question: "Which roles can WinStaff support through RPO?",
     answer:
-      "Our RPO teams recruit for information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional services roles in the United States.",
+      "Our RPO teams recruit for information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional services roles for clients worldwide.",
   },
   {
     question: "How do you report on RPO performance?",
@@ -349,17 +347,17 @@ export const ctaBanner = {
   description:
     "Book a 30-minute, no-obligation call. We will look at your hiring plan and suggest the recruiting model that fits it.",
   cta: { label: "Book a Meeting", href: "/contact" },
-  secondary: { label: `Call ${company.phone}`, href: company.phoneHref },
+  secondary: { label: "Email us", href: `mailto:${company.email}` },
 };
 
 /* ---------- Footer ---------- */
 export const footer = {
   headline: "Focus on your business. We'll handle the recruiting.",
   blurb:
-    "Offshore recruitment partner for US employers and staffing firms. Talent sourcing, full-cycle recruiting and RPO, delivered from Pune, India.",
+    "Offshore recruitment partner for employers and staffing firms worldwide. Talent sourcing, full-cycle recruiting and RPO, delivered from Pune, India.",
   cta: { label: "Book a Meeting", href: "/contact" },
   newsletter: {
-    title: "US hiring insights, once a month",
+    title: "Hiring insights, once a month",
     description: "Talent market trends, recruiting tips and offshore staffing best practices.",
     placeholder: "Work email",
     button: "Subscribe",
@@ -392,7 +390,6 @@ export const footer = {
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Use", href: "/terms" },
   ] satisfies NavLink[],
-  tagline: "Pune, India · Recruiting for clients across the USA",
   copyright: `© 2026 ${company.name}. All rights reserved.`,
   watermark: "WINSTAFF",
 };
@@ -401,13 +398,13 @@ export const footer = {
 export const about = {
   hero: {
     eyebrow: "About WinStaff",
-    title: { before: "The offshore recruiting team behind", highlight: "US hiring" },
+    title: { before: "The offshore recruiting team behind", highlight: "global hiring" },
     description:
-      "WinStaff Solutions is an offshore recruitment partner for US employers and staffing firms. We help our clients:",
+      "WinStaff Solutions is an offshore recruitment partner for employers and staffing firms worldwide. We help our clients:",
     pillars: ["Source faster", "Hire better", "Scale on demand"],
     cards: [
       { title: "Pune, India", text: "Delivery center" },
-      { title: "USA", text: "Where our clients hire" },
+      { title: "Worldwide", text: "Where our clients hire" },
     ],
     image: {
       src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80",
@@ -419,12 +416,12 @@ export const about = {
     title: "Built on the belief that great companies are built by great teams",
     paragraphs: [
       "WinStaff Solutions was founded on a simple idea: give growing companies the recruiting capacity they need, without the cost of building it all in-house.",
-      "Today our sourcers and recruiters in Pune, India support US employers and staffing firms across information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional roles.",
+      "Today our sourcers and recruiters in Pune, India support employers and staffing firms around the world across information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional roles.",
       "We work as an extension of our clients' teams, in their tools and on their hours. We are honest about the market, we report clearly on progress, and we take responsibility for the quality of every submission.",
     ],
     image: {
       src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80",
-      alt: "Recruiter discussing a role on a call with a US hiring manager",
+      alt: "Recruiter discussing a role on a call with a hiring manager",
     },
   },
   missionVision: [
@@ -436,7 +433,7 @@ export const about = {
     {
       title: "Our vision",
       description:
-        "To be the most trusted offshore recruitment partner for US businesses, known for quality, reliability and people who stay.",
+        "To be the most trusted offshore recruitment partner for businesses worldwide, known for quality, reliability and people who stay.",
     },
   ],
   values: [
@@ -480,7 +477,7 @@ export type ServiceGroup = {
 export const servicesPage = {
   hero: {
     eyebrow: "How we help",
-    title: "Offshore sourcing, recruiting and RPO for US hiring teams",
+    title: "Offshore sourcing, recruiting and RPO for hiring teams worldwide",
     description:
       "Scale your core business by letting us handle recruiting. Choose a single service or hand us the whole process, delivered by a dedicated team that works as an extension of yours.",
     image: {
@@ -639,7 +636,7 @@ export type IndustryDetail = {
 export const industriesPage = {
   hero: {
     eyebrow: "Who we serve",
-    title: "Specialist recruiting for technology-driven US talent markets",
+    title: "Specialist recruiting for technology-driven talent markets",
     description:
       "Every talent market hires differently. Our sourcing strategies and screening priorities are tailored to the skills, experience and business context of each role.",
     image: {
@@ -653,7 +650,7 @@ export const industriesPage = {
       name: "Information Technology",
       tagline: "Software, data, cloud & security",
       description:
-        "Technical recruiting for US product companies, IT services firms and IT staffing agencies, from individual contributors to engineering leaders.",
+        "Technical recruiting for product companies, IT services firms and IT staffing agencies, from individual contributors to engineering leaders.",
       icon: Code,
       image: {
         src: "https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&w=1200&q=80",
@@ -691,7 +688,7 @@ export const industriesPage = {
       name: "Engineering & Manufacturing",
       tagline: "Automation, controls & plant operations",
       description:
-        "Engineering and operations talent for US manufacturers, EPC firms and automation companies, from the plant floor to plant leadership.",
+        "Engineering and operations talent for manufacturers, EPC firms and automation companies, from the plant floor to plant leadership.",
       icon: Factory,
       image: {
         src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
@@ -700,7 +697,7 @@ export const industriesPage = {
       roles: ["Controls Engineering", "Industrial Automation", "Mechanical Engineering", "Civil Engineering", "Manufacturing Operations"],
       challenges: ["Plant locations outside major metros", "High-volume hiring for new facilities", "Relocation and shift requirements"],
       howWeHelp: [
-        "Sourcing across US industrial regions",
+        "Sourcing across major industrial regions",
         "High-volume and project-based recruiting for plant ramp-ups",
         "Screening on certifications, shifts and relocation readiness",
       ],
@@ -742,9 +739,8 @@ export const contactPage = {
       "Tell us about your hiring needs and we will respond within one business day. Candidates and people interested in working with us are welcome too.",
   },
   channels: [
-    { label: "Call us", value: company.phone, href: company.phoneHref, note: "Available during US business hours", icon: Phone },
     { label: "Contact email", value: company.email, href: `mailto:${company.email}`, note: "Write to us", icon: Mail },
-    { label: "Head office", value: "Office No: 1610, Tower 09, Bramhacorp Business Park", href: company.mapsUrl, note: "New Kalyani Nagar, Pune, Maharashtra 411014, India", icon: MapPin },
+    { label: "Head office", value: "Office No: 1610, Tower 09, Bramhacorp Business Park, New Kalyani Nagar, Pune, Maharashtra 411014, India", href: company.mapsUrl, icon: MapPin },
   ],
   form: {
     title: "Send us a message",
@@ -771,7 +767,7 @@ export const contactPage = {
   map: {
     title: "Our head office in Pune",
     link: company.mapsUrl,
-    embedSrc: "https://www.google.com/maps?q=Bramhacorp+Business+Park,+New+Kalyani+Nagar,+Pune,+Maharashtra+411014,India&z=16&output=embed",
+    embedSrc: "https://www.google.com/maps?q=Beacon+Martech,+Bramhacorp+Business+Park,+New+Kalyani+Nagar,+Pune,+Maharashtra+411014&z=17&output=embed",
   },
 };
 
@@ -781,7 +777,7 @@ export const employersPage = {
     eyebrow: "Why WinStaff",
     title: "De-risk your hiring operations. At scale.",
     description:
-      "Whether you need one dedicated sourcer, a full recruiting team or a managed RPO program, WinStaff gives US employers and staffing firms a single, accountable offshore partner.",
+      "Whether you need one dedicated sourcer, a full recruiting team or a managed RPO program, WinStaff gives employers and staffing firms a single, accountable offshore partner.",
     image: {
       src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80",
       alt: "Hiring manager and recruiter reviewing shortlisted candidates",
@@ -793,7 +789,7 @@ export const employersPage = {
     title: "Recruiting problems we solve every week",
     items: [
       { title: "Requisitions open too long", description: "Your recruiters cannot cover every role. We add sourcing and recruiting capacity so nothing sits idle.", icon: Hourglass },
-      { title: "Rising cost per hire", description: "Adding US recruiters is expensive and slow. An offshore team gives you capacity at a lower cost.", icon: TrendingDown },
+      { title: "Rising cost per hire", description: "Adding in-house recruiters is expensive and slow. An offshore team gives you capacity at a lower cost.", icon: TrendingDown },
       { title: "Hiring demand that changes", description: "Scale your recruiting team up for new projects and back down when demand slows.", icon: Scaling },
       { title: "Recruiters stuck on admin", description: "We take on sourcing, scheduling and follow-ups so your team can focus on clients and closing.", icon: Clock },
     ],
@@ -815,7 +811,7 @@ export const employersPage = {
     title: "What you get with every engagement",
     items: [
       { title: "Dedicated account manager", description: "One point of contact who knows your business and your open roles." },
-      { title: "US-hours availability", description: "A team that works hours overlapping with your business day." },
+      { title: "Time-zone aligned availability", description: "A team that works hours overlapping with your business day." },
       { title: "Works in your tools", description: "Your ATS, CRM, job boards and communication channels, your processes." },
       { title: "Data security", description: "NDA-backed engagements with access limited to your assigned team." },
       { title: "Transparent pricing", description: "Clear monthly fees agreed up front. No surprises on the invoice." },

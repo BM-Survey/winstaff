@@ -18,7 +18,7 @@ export function ContactChannels() {
               <span>
                 <span className="block text-xs font-semibold uppercase tracking-wider text-muted">{c.label}</span>
                 <span className="mt-0.5 block text-base font-bold text-primary">{c.value}</span>
-                <span className="mt-0.5 block text-sm text-muted">{c.note}</span>
+                {"note" in c && c.note && <span className="mt-0.5 block text-sm text-muted">{c.note}</span>}
               </span>
             </a>
           </li>

@@ -55,7 +55,6 @@ export const organizationSchema = {
   description: company.description,
   slogan: company.tagline,
   email: company.email,
-  telephone: company.phone,
   address: {
     "@type": "PostalAddress",
     streetAddress: `${company.address.street}, New Kalyani Nagar`,
@@ -64,7 +63,7 @@ export const organizationSchema = {
     postalCode: company.address.postalCode,
     addressCountry: "IN",
   },
-  areaServed: { "@type": "Country", name: "United States" },
+  areaServed: "Worldwide",
   knowsAbout: [
     "Offshore recruiting",
     "Recruitment process outsourcing (RPO)",
@@ -77,9 +76,8 @@ export const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
-    telephone: company.phone,
     email: company.email,
-    areaServed: "US",
+    areaServed: "Worldwide",
     availableLanguage: ["English"],
   },
   ...(company.social.length > 0 && { sameAs: company.social.map((s) => s.href) }),
@@ -90,7 +88,7 @@ export const websiteSchema = {
   "@id": `${company.url}/#website`,
   url: company.url,
   name: company.name,
-  inLanguage: "en-US",
+  inLanguage: "en",
   publisher: { "@id": orgId },
 };
 
@@ -137,7 +135,7 @@ export function serviceSchema({
     serviceType,
     url: absoluteUrl(path),
     provider: { "@id": orgId },
-    areaServed: { "@type": "Country", name: "United States" },
+    areaServed: "Worldwide",
     ...(offers && {
       hasOfferCatalog: {
         "@type": "OfferCatalog",

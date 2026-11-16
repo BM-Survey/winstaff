@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Users } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -19,7 +19,7 @@ export function Hero() {
         className="pointer-events-none absolute -bottom-40 -left-32 size-[28rem] rounded-full bg-primary/10 blur-3xl"
       />
 
-      <Container className="relative grid items-center gap-14 py-16 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
+      <Container className="relative grid items-center gap-14 pb-16 pt-8 sm:pb-20 sm:pt-10 lg:grid-cols-12 lg:gap-10 lg:pb-24 lg:pt-12">
         {/* Copy */}
         <Reveal className="lg:col-span-6">
           <p className="inline-flex items-center gap-2 rounded-pill border border-line bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary shadow-soft">
@@ -100,6 +100,17 @@ export function Hero() {
                   className="object-cover"
                 />
               </div>
+            </div>
+
+            {/* Floating stat card */}
+            <div className="animate-float absolute left-0 top-6 flex -translate-x-3 items-center gap-3 rounded-2xl border border-line bg-white/95 px-4 py-3 shadow-float backdrop-blur sm:-translate-x-8">
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent-soft text-accent-dark">
+                <Users aria-hidden="true" className="size-5" />
+              </span>
+              <span>
+                <span className="block text-2xl font-extrabold leading-none text-primary">{hero.stat.value}</span>
+                <span className="mt-1 block text-xs font-medium text-muted">{hero.stat.label}</span>
+              </span>
             </div>
           </div>
         </Reveal>

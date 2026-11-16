@@ -10,7 +10,7 @@ import { industriesPage } from "@/content/site";
 export const metadata: Metadata = pageMetadata({
   title: "Industries We Recruit For",
   description:
-    "Offshore recruiting for US roles in information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional services.",
+    "Offshore recruiting for roles in information technology, semiconductor and electronics, engineering and manufacturing, and corporate and professional services.",
   path: "/industries",
 });
 

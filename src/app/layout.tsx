@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   description: company.description,
   keywords: [
     "offshore recruiting",
-    "offshore recruitment services USA",
+    "global offshore recruitment services",
     "recruitment process outsourcing",
     "RPO services",
     "offshore sourcing",
     "dedicated offshore recruiters",
-    "US staffing support",
+    "offshore staffing support",
   ],
   openGraph: {
     type: "website",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-US" className={`${jakarta.variable} h-full antialiased`}>
+    <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <a

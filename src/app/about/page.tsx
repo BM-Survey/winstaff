@@ -10,7 +10,7 @@ import { CTABanner } from "@/components/ui/CTABanner";
 export const metadata: Metadata = pageMetadata({
   title: "About Us: Offshore Recruitment Partner",
   description:
-    "WinStaff Solutions is an offshore recruitment partner with a delivery center in Pune, India, helping US employers and staffing firms source, recruit and scale hiring.",
+    "WinStaff Solutions is an offshore recruitment partner with a delivery center in Pune, India, helping employers and staffing firms worldwide source, recruit and scale hiring.",
   path: "/about",
 });
 

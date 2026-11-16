@@ -10,9 +10,9 @@ import { CTABanner } from "@/components/ui/CTABanner";
 import { servicesPage } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Offshore Recruiting Services for the USA",
+  title: "Global Offshore Recruiting Services",
   description:
-    "Offshore talent sourcing, full-cycle recruiting, dedicated recruiters and RPO for US employers and staffing firms. Scale recruiting capacity at a lower cost.",
+    "Offshore talent sourcing, full-cycle recruiting, dedicated recruiters and RPO for employers and staffing firms worldwide. Scale recruiting capacity at a lower cost.",
   path: "/services",
 });
 
