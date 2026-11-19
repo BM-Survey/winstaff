@@ -20,7 +20,11 @@ export function ContactForm() {
   const [error, setError] = useState<string | null>(null);
 
   // Deep links such as /contact#job-seeker pre-select the audience.
+  // The hash is only readable on the client, so this has to run after mount:
+  // deriving it in useState would make the prerendered HTML disagree with the
+  // first client render and cause a hydration mismatch.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- see above
     if (window.location.hash === "#job-seeker") setAudience("job-seeker");
   }, []);
 
