@@ -37,7 +37,7 @@ export function ContactForm() {
     setError(null);
 
     try {
-      const response = await fetch("/api/contact/", {
+      const response = await fetch("/contact.php", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ ...payload, audience }),
