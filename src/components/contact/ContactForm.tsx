@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState, type FormEvent } from "react";
-import { CheckCircle2, Send } from "lucide-react";
+import { AlertCircle, CheckCircle2, Loader2, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { contactPage } from "@/content/site";
 
@@ -16,16 +16,36 @@ export function ContactForm() {
   const id = useId();
   const [audience, setAudience] = useState<Audience>("employer");
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Deep links such as /contact#job-seeker pre-select the audience.
   useEffect(() => {
     if (window.location.hash === "#job-seeker") setAudience("job-seeker");
   }, []);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: wire to a backend / email service. UI-only for now.
-    setSent(true);
+    if (sending) return;
+
+    const payload = Object.fromEntries(new FormData(e.currentTarget).entries());
+    setSending(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact/", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ ...payload, audience }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error ?? "Something went wrong. Please try again.");
+      setSent(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   }
 
   if (sent) {
@@ -147,10 +167,21 @@ export function ContactForm() {
         <span>I agree to be contacted by WinStaff Solutions about my enquiry.</span>
       </label>
 
+      {error ? (
+        <p role="alert" className="mt-5 flex items-start gap-2.5 rounded-xl bg-red-50 p-3.5 text-sm text-red-700">
+          <AlertCircle aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          {error}
+        </p>
+      ) : null}
+
       <div className="mt-6">
-        <Button type="submit" size="lg" className="w-full sm:w-auto">
-          Send message
-          <Send aria-hidden="true" className="size-4" />
+        <Button type="submit" size="lg" disabled={sending} className="w-full disabled:opacity-70 sm:w-auto">
+          {sending ? "Sending\u2026" : "Send message"}
+          {sending ? (
+            <Loader2 aria-hidden="true" className="size-4 animate-spin" />
+          ) : (
+            <Send aria-hidden="true" className="size-4" />
+          )}
         </Button>
       </div>
     </form>
