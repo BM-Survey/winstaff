@@ -40,9 +40,9 @@ export function Footer() {
       />
 
       <Container className="relative">
-        {/* Top: conversation CTA + newsletter */}
-        <div className="grid gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-7">
+        {/* Top: conversation CTA */}
+        <div className="py-16 sm:py-20">
+          <div className="max-w-3xl">
             <Logo tone="dark" />
             <h2 className="mt-8 max-w-xl text-3xl font-bold tracking-tight sm:text-4xl">{footer.headline}</h2>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-white/70">{footer.blurb}</p>
@@ -78,28 +78,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-5 lg:pt-16">
-            <h3 className="text-lg font-semibold">{footer.newsletter.title}</h3>
-            <p className="mt-2 text-sm text-white/65">{footer.newsletter.description}</p>
-            {/* UI only for now. TODO: wire to a form handler */}
-            <form className="mt-5 flex flex-col gap-3 sm:flex-row" action="#" method="post">
-              <label htmlFor="newsletter-email" className="sr-only">
-                {footer.newsletter.placeholder}
-              </label>
-              <input
-                id="newsletter-email"
-                type="email"
-                name="email"
-                required
-                placeholder={footer.newsletter.placeholder}
-                className="h-12 flex-1 rounded-pill border border-white/20 bg-white/5 px-5 text-sm text-white placeholder:text-white/45 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
-              />
-              <Button type="submit" variant="accent" className="h-12">
-                {footer.newsletter.button}
-              </Button>
-            </form>
-            <p className="mt-3 text-xs text-white/50">{footer.newsletter.note}</p>
-          </div>
         </div>
 
         <hr className="border-white/10" />

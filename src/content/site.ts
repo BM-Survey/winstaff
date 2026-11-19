@@ -356,13 +356,6 @@ export const footer = {
   blurb:
     "Offshore recruitment partner for employers and staffing firms worldwide. Talent sourcing, full-cycle recruiting and RPO, delivered from Pune, India.",
   cta: { label: "Book a Meeting", href: "/contact" },
-  newsletter: {
-    title: "Hiring insights, once a month",
-    description: "Talent market trends, recruiting tips and offshore staffing best practices.",
-    placeholder: "Work email",
-    button: "Subscribe",
-    note: "No noise. Unsubscribe any time.",
-  },
   serviceLinks: [
     { label: "Talent Sourcing", href: "/services#sourcing" },
     { label: "Database Building", href: "/services#sourcing" },
